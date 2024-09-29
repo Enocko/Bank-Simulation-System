@@ -11,7 +11,7 @@ def setup_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             username TEXT NOT NULL UNIQUE,
             password TEXT NOT NULL,
-            balance REAL DEFAULT 10000
+            balance REAL DEFAULT 0
         )
     ''')
     conn.commit()
