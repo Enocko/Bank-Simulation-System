@@ -12,7 +12,7 @@ def sign_up():
     try:
         # Insert the user into the database
         cursor.execute("INSERT INTO users (username, password, balance) VALUES (?, ?, ?)", 
-                       (username, hashed_password, 10000))  # Default balance = 10000
+                       (username, hashed_password, 0))  # Default balance = 0
         conn.commit()
         print("Account created successfully!")
     except Exception as e:
